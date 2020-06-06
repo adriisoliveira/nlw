@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt_br"> 
+<head>
+    <!--configurações da pagina-->
+    <meta charset="UTF-8"><!--Serve para configurarmos os metadados do html,aceitar caracteres especiais-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--configuar o site para se adapatar as telas-->
+    
+    {% block title %}
+    <title>Ecoleta</title><!--titulo da pagina-->
+    {% endblock title %}
+
+    
+    
+
+    <!--Uma tag para puxar fontes que o google disponibiliza-->
+    <!--Para adicionar essa tag vai no google fonts, escolhe as fontes e os
+    tamanhos, vai em embed e cola o link disponibilizado aqui-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <link rel="stylesheet" href="/styles/responsive.css">
+
+    {% block styles %}
+    {% endblock styles %}
+
+</head>
+
+
+
+<body>
+    <!--Não é como se estivessimos escrevendo um documento de word, tem que ter as tags, organizar e tudo mais-->
+
+    <!--Ele fez uma div com um id que não pode ter o nome repetido, dentro dele vou colocar a caixa content
+    e colocar o fundo-->
+    <div id="{{pageId}}">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}     
+
+
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+</html>
