@@ -1,29 +1,15 @@
 {% extends "layout.html" %}
 
-{% set bodyId = "page-home" %}
+{% set pageId = "page-home" %}
 
-
-    {% block styles %}
+{% block styles %}
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
-    {% endblock styles %}
+{% endblock styles %}
 
-    
 
-</head>
+{% block content %}
 
-<body>
-    <!--Não é como se estivessimos escrevendo um documento de word, tem que ter as tags, organizar e tudo mais-->
-
-    <!--Ele fez uma div com um id que não pode ter o nome repetido, dentro dele vou colocar a caixa content
-    e colocar o fundo-->
-    {#<div id="page-home">#}
-    <!--Uma caixa dentro do body, a div, a exibição em caixa tem
-    do tipo box que ocuba na linha inteira e a inline que ocupa 
-    somente o tamanho da caixa em questão
-    Class é uma classificação do elemento, classe conteudo-->
-
-    {% block content %}
      <div class="content">
             <!--Marcações de texto-->   
             <header>
@@ -45,7 +31,7 @@
         </div>
 
     
-    {% endblock content %} 
+{% endblock content %} 
 
 {% block modal %}
     {% include "partials/modal.html"%}
